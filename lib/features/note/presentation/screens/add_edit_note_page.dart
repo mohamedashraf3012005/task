@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task2/features/note/presentation/widgets/CustomAppbar.dart';
+import 'package:task2/features/on_boarding/presentation/screens/onboarding_screen.dart';
 
 class AddEditNotePage extends StatefulWidget {
   const AddEditNotePage({super.key});
@@ -42,7 +43,7 @@ class _AddNoteScreenState extends State<AddEditNotePage> {
             // Content field
             TextField(
               controller: _contentController,
-              maxLines: 12,
+              maxLines: 11,
               decoration: const InputDecoration(
                 hintText: 'Start typing your note...',
                 border: InputBorder.none,
@@ -131,7 +132,7 @@ class _AddNoteScreenState extends State<AddEditNotePage> {
               ],
             ),
 
-            const SizedBox(height: 40),
+            const SizedBox(height: 10),
 
             // Save button
             SizedBox(
@@ -139,7 +140,12 @@ class _AddNoteScreenState extends State<AddEditNotePage> {
               height: 54,
               child: ElevatedButton(
                 onPressed: () {
-                  // Save logic here
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const OnboardingScreen(),
+                    ),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,

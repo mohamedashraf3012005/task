@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:task2/features/note/presentation/screens/add_edit_note_page.dart';
+import 'package:task2/features/note/presentation/screens/folder_detail_page.dart';
 
 class AddNewNote extends StatelessWidget {
   const AddNewNote({super.key, required this.title, required this.subtitle});
@@ -80,7 +82,14 @@ class AddNewNote extends StatelessWidget {
           Material(
             color: Colors.transparent,
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AddEditNotePage(),
+                  ),
+                );
+              },
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(28),
               ),

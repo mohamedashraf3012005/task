@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task2/features/note/presentation/screens/folder_detail_page.dart';
 
 class CardFolders extends StatelessWidget {
   String title;
@@ -14,7 +15,12 @@ class CardFolders extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const FolderDetailPage()),
+        );
+      },
       child: Container(
         width: 200,
         height: 110,

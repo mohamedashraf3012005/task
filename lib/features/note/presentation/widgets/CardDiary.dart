@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task2/features/note/presentation/screens/diary_page.dart';
 
 class CardDiary extends StatelessWidget {
   String title;
@@ -16,7 +17,12 @@ class CardDiary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      onPressed: () {},
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const DiaryPage()),
+        );
+      },
       child: Card(
         color: const Color(0xFFFEFEFE),
         elevation: 2,

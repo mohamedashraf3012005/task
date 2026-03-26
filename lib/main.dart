@@ -28,7 +28,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AddEditNotePage(),
+      home: OnboardingScreen(),
     );
   }
 }

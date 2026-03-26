@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task2/features/note/presentation/screens/my_folders_page.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   String title;
@@ -17,7 +18,15 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leading: IconButton(icon: Icon(firstIcon), onPressed: () {}),
+      leading: IconButton(
+        icon: Icon(firstIcon),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const MyFoldersPage()),
+          );
+        },
+      ),
       titleSpacing: 65,
       title: Text(
         title,
